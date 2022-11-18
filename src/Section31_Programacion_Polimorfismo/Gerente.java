@@ -1,0 +1,15 @@
+package Section31_Programacion_Polimorfismo;
+
+public final class Gerente extends Empleado {
+    private final String departamento;
+
+    public Gerente(String nombre, double sueldo, String departamento) {
+        super(nombre, sueldo);
+        this.departamento = departamento;
+    }
+
+    @Override
+    protected String obtenerDetalles() {
+        return super.obtenerDetalles() + ", departamento: " + this.departamento;
+    }
+}
